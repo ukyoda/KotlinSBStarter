@@ -6,6 +6,7 @@ package database
 import java.sql.JDBCType
 import org.mybatis.dynamic.sql.SqlTable
 
+// Fieldが定義されている。
 object UserDynamicSqlSupport {
     object User : SqlTable("user") {
         val id = column<Int>("id", JDBCType.INTEGER)

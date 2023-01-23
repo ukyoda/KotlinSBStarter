@@ -13,6 +13,8 @@ import org.mybatis.dynamic.sql.SqlBuilder.isEqualTo
 import org.mybatis.dynamic.sql.util.kotlin.*
 import org.mybatis.dynamic.sql.util.kotlin.mybatis3.*
 
+// UserMapperの関数を使ってクエリを実行する、拡張関数が定義されている
+
 fun UserMapper.count(completer: CountCompleter) =
     countFrom(this::count, User, completer)
 

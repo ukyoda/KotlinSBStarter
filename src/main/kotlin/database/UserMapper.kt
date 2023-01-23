@@ -20,6 +20,8 @@ import org.mybatis.dynamic.sql.select.render.SelectStatementProvider
 import org.mybatis.dynamic.sql.update.render.UpdateStatementProvider
 import org.mybatis.dynamic.sql.util.SqlProviderAdapter
 
+// 基本的なクエリ発行の関数が定義されたIF
+// Select, Insertなどの基本的なDML(データ操作言語)で使用する関数が含まれている
 @Mapper
 interface UserMapper {
     @SelectProvider(type=SqlProviderAdapter::class, method="select")
