@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.RestController
 
 // インジェクションにはField InjectionやSetter Injectionもあるが、
 // 基本的にはConstructor Injectionを使ったほうがいいとのこと
+// * インジェクション対象のオブジェクトを不変にできる
+// * 依存している対象がコンストラクタに並べられるため、クラスの責務が多くなってきたときに気づきやすい
+// * 循環依存を防げる
+// * テストコードで、Spring Frameworkに依存させない（コンテナを使用しない）形でインジェクションするオブジェクトの差し替えができる
 @RestController
 @RequestMapping("greeter") // constructor injection
 class GreeterController(private val greeter: Greeter) {
